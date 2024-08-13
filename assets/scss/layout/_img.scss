@@ -1,0 +1,29 @@
+.img-nav{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.img-user{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.img-header{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.img-table{
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+}
+.img-big{
+    width: 141px;
+    height: auto;
+    object-fit: cover;
+}
+
+.arrow::after{
+    display: none;
+}

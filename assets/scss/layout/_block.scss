@@ -1,0 +1,41 @@
+//   *{
+//        outline: 1px solid red;
+//     }
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+.container{
+   width: 1280px;
+}
+.container-nav{
+   width: 296px;
+   
+}
+.container-main {
+   width: calc(100% - 296px);
+   margin-left: auto;
+   padding: 0 32px;
+}
+.container-list-group{
+   width: 320px;
+}
+.container-card{
+   width: 584px;
+}
+body {
+   font-family: "Noto Sans TC","Roboto Mono", sans-serif;
+}
+
+.form_input::-webkit-input-placeholder {
+   color: $gray-400;
+   padding: 16px 24px;
+}
+
+.text-form::placeholder {
+   color: $gray-900;
+   font-size: 16px;
+   font-weight: normal;
+   bottom: 0.2rem;
+   position: relative;
+ }

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>後台表單設計</title>
+</head>
+
+<body>
+    <div class="container d-flex">
+        <%- include('./layout/nav_admin'); -%>
+
+            <div class="container-main m-0 vh-100 d-flex flex-column justify-content-between">
+                <div>
+                <nav class="navbar navbar-expand-lg  px-0 py-6">
+                    <div class="container-fluid  p-0">
+                        <a class="navbar-brand fs-4 text-dark fw-bold p-0 me-5" href="#">Admin</a>
+                        <div class="navbar-collapse d-flex justify-content-between">
+                            <ul class="navbar-nav d-flex align-items-center">
+                                <li>
+                                    <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <img class="img-header me-2" src="../assets/images/add_24dp_198754_FILL1_wght300_GRAD200_opsz24.png" alt="add">
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a type="button" class="nav-link p-0 text-dark fw-bold link-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        Add New Admin
+                                    </a>
+                                </li>
+                            </ul>
+                            <div>
+                                <img class="img-header me-4" src="../assets/images/search_24dp_212529.png" alt="earch">
+                                <img class="img-header" src="../assets/images/notifications_active_24dp_212529.png"
+                                    alt="notifications">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <table class="table table-hover">
+                    <thead class="border-dark">
+                        <tr>
+                            <th class="p-0 pb-1 d-flex align-items-center" scope="col">ID <img class="img-table align-middle" src="../assets/images/arrow_downward_24dp_198754_FILL1_wght300_GRAD200_opsz24.png" alt=""></th>
+                            <th class="p-0 pb-1" scope="col">Name</th>
+                            <th class="p-0 pb-1" scope="col">Email</th>
+                            <th class="p-0 pb-1" scope="col">Verified</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="px-0 py-12" scope="row">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#user">
+                                    #1
+                                </a>
+                            </th>
+                            <td class="px-0 py-12">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#user">
+                                    Emir Wicks
+                                </a>
+                            </td>
+                            <td class="px-0 py-12">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#user">
+                                    emir.wicks@mail.com
+                                </a>
+                            </td>
+                            <td class="d-flex justify-content-between px-0 py-12">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#user">
+                                    Yes
+                                </a>
+                                <div>
+                                    <a type="button" data-bs-toggle="modal" data-bs-target="#user">
+                                        <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                            alt="visibility">
+                                    </a>
+                                    <a type="button" data-bs-toggle="modal" data-bs-target="#change">
+                                        <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#2</th>
+                            <td class="px-0 py-12">Zaina Goldsmith</td>
+                            <td class="px-0 py-12">zaina.goldsmith@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#3</th>
+                            <td class="px-0 py-12">Mahima Lopez</td>
+                            <td class="px-0 py-12">mahima.lopez@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#4</th>
+                            <td class="px-0 py-12">Pharrell Murray</td>
+                            <td class="px-0 py-12">pharrell.murray@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#5</th>
+                            <td class="px-0 py-12">Annika Mcbride</td>
+                            <td class="px-0 py-12">annika.mcbride@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#6</th>
+                            <td class="px-0 py-12">Fatimah Clark</td>
+                            <td class="px-0 py-12">fatimah.clark@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#7</th>
+                            <td class="px-0 py-12">Klaudia Rhodes</td>
+                            <td class="px-0 py-12">klaudia.rhodes@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#8</th>
+                            <td class="px-0 py-12">Tillie Lucero</td>
+                            <td class="px-0 py-12">tillie.lucero@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#9</th>
+                            <td class="px-0 py-12">tillie.lucero@mail.com</td>
+                            <td class="px-0 py-12">sabrina.stephenson@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="px-0 py-12" scope="row">#10</th>
+                            <td class="px-0 py-12">Annie Smith</td>
+                            <td class="px-0 py-12">annie.smith@mail.com</td>
+                            <td class="d-flex justify-content-between px-0 py-12">Yes
+                                <div>
+                                    <img class="img-header me-4" src="../assets/images/visibility_24dp_212529_FILL1_wght300_GRAD200_opsz24.png"
+                                        alt="visibility">
+                                    <img class="img-header" src="../assets/images/edit_24dp_212529_FILL1_wght0_GRAD0_opsz24.png" alt="edit">
+                                </div>
+                            </td>
+                        </tr>
+
+                        
+                        
+                    </tbody>
+                </table>
+                
+                </div>
+
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="rounded-0 p-1 btn btn-outline-success"><img class="img-header" src="../assets/images/chevron_left_24dp_212529_FILL1_wght200_GRAD200_opsz24.png" alt=""></button>
+                    <button type="button" class="rounded-0 py-9 px-10 btn btn-outline-success bg-success text-white">1</button>
+                    <button type="button" class="rounded-0 py-9 px-10 btn btn-outline-success text-dark">2</button>
+                    <button type="button" class="rounded-0 py-9 px-10 btn btn-outline-success text-dark">3</button>
+                    <button type="button" class="rounded-0 p-1 btn btn-outline-success"><img class="img-header" src="../assets/images/chevron_right_24dp_212529_FILL1_wght200_GRAD200_opsz24.png" alt=""></button>
+                </div>
+
+            
+    </div>
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header p-6 border-white">
+                        <h5 class="modal-title fs-9 fw-bold" id="staticBackdropLabel">New Admin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0 pb-6 px-6">
+
+                        <form class="text-dark fw-bold fs-9" action="#">Account
+
+                            <div class="my-3 ">
+                                <label class="fs-5 mb-1 fw-normal form-label" for="name">Name</label>
+                                <input class="form-control form-control-lg w-100 rounded-2 border-dark" type="text" id="name">
+                            </div>
+                            <div class="mb-4 border-bottom ">
+                                <label class="form-label fs-5 mb-1 fw-normal" for="email">Email</label>
+                                <input class="mb-4 form-control form-control-lg w-100 rounded-2 border-dark" type="email"
+                                    id="email">
+                            </div>
+
+                            <div class="p-0 border-bottom mb-4">
+                                <h2 class="text-dark fw-bold fs-9 mb-12">Verification</h2> 
+                                <div class="d-flex align-items-center mb-12">
+                                    <img class="img-header me-2" src="../assets/images/warning_24dp_DC3545_FILL1_wght400_GRAD0_opsz24.png" alt="warning">
+                                    <h3 class="text-dark fw-bold fs-6 m-0">Unverified</h3>
+                                </div>
+                                <button type="button" class="mb-4 btn btn-outline-success w-100 border rounded-2 py-3">Send Verification Mail</button>
+                            </div>
+
+                            <div class="p-0 border-bottom mb-4">
+                                <h2 class="text-dark fw-bold fs-9 mb-3">Access Level</h2>
+                                <div class="navbar-nav mb-4">
+                                    <div class="nav-item dropdown">
+                                        <a class=" p-3 nav-link dropdown-toggle toggle text-secondary fw-normal w-100 border border-dark rounded-2 " href="#">
+                                            -Choose access level-
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h2 class="text-dark fw-bold fs-9 mb-3">Custom Access</h2>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0" id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Lecture
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0" id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Coupon
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0" id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Message
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0" id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Setting
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0" id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Task Menu
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                            
+                    </div>
+                    <div class="modal-footer border-white pt-0 px-5">
+                        <button type="button" class="btn btn-outline-success fw-bold py-2 px-6" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success fw-bold py-2 px-6">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body p-6 ">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <img class="img-big" src="../assets/images/emir.jpeg" alt="user">
+                                <div>
+                                    <ul class="ps-4 m-0">
+                                        <li class="list-group-item mb-2">#1</li>
+                                        <li class="list-group-item fw-bold">Admin</li>
+                                        <li class="list-group-item mb-2 fw-bold fs-4">Emir Wicks</li>
+                                        <li class="list-group-item mb-3 text-secondary fs-5">emir.wicks@mail.com</li>
+                                    </ul>
+                                    <div class="ps-4">
+                                        <a  class="m-0 py-1 px-2 bg-light fs-5 text-dark link-underline link-underline-opacity-0" href="#">
+                                            Verified
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <a data-bs-toggle="collapse" href="#edit" role="button" aria-expanded="false"
+                                    aria-controls="edit">
+                                    <img class="img-header" src="../assets/images/keyboard_arrow_down_24dp_198754_FILL1_wght400_GRAD0_opsz24.png" alt="keyboard">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="edit">
+                        <div class="d-flex justify-content-end p-6 pt-0">
+                            <button type="button" class="px-6 py-2 rounded-0 btn btn-outline-danger me-3" data-bs-dismiss="modal">Deactivate</button>
+                            <button type="button" class="px-6 py-2 rounded-0 btn btn-success" data-bs-dismiss="modal">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="change" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header p-6 ">
+                        <h5 class="modal-title fs-9 fw-bold" id="staticBackdropLabel">New Admin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0 pb-5 px-6">
+        
+                        <form class="text-dark fw-bold fs-9" action="#">Account
+        
+                            <div class="my-3 ">
+                                <label class="fs-5 mb-1 fw-normal form-label" for="name">Name</label>
+                                <input class="align-middle form-control form-control-lg w-100 rounded-2 border-white text-form bg-light" type="text" placeholder="Emir Wicks" id="name" disabled>
+                            </div>
+                            <div class="mb-4 border-bottom ">
+                                <label class="form-label fs-5 mb-1 fw-normal" for="email">Email</label>
+                                <input class="mb-4 form-control form-control-lg w-100 rounded-2 border-white text-form bg-light" type="email" placeholder="emir.wicks@mail.com" disabled
+                                    id="email">
+                            </div>
+        
+                            <div class="p-0 border-bottom mb-4">
+                                <h2 class="text-dark fw-bold fs-9 mb-12">Verification</h2>
+                                <div class="d-flex align-items-center justify-content-between mb-12">
+                                    <div class="d-flex align-items-center">
+                                        <img class="img-header me-2"
+                                            src="../assets/images/check_circle_24dp_198754_FILL1_wght400_GRAD0_opsz24.png" alt="warning">
+                                        <h3 class="text-dark fw-bold fs-6 m-0">verified</h3>
+                                    </div>
+                                    <time class="text-dark  fs-5 fw-normal" datetime="#">2020/4/12</time>
+                                </div>
+                                <button type="button" class="mb-4 btn btn-outline-secondary w-100 border rounded-2 py-3" disabled>Send
+                                    Verification Mail</button>
+                            </div>
+        
+                            <div class="p-0 border-bottom mb-4">
+                                <h2 class="text-dark fw-bold fs-9 mb-3">Access Level</h2>
+                                <div class="navbar-nav mb-4">
+                                    <div class="nav-item dropdown">
+                                        <a class=" p-3 nav-link dropdown-toggle toggle text-secondary fw-normal w-100 border border-dark rounded-2"
+                                            href="#">
+                                            Admin
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="mb-4">
+                                <h2 class="text-dark fw-bold fs-9 mb-3">Custom Access</h2>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0"
+                                            id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Lecture
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0"
+                                            id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Coupon
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0"
+                                            id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Message
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0"
+                                            id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Setting
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3 border-bottom">
+                                    <div class="form-check d-flex align-items-center mb-4">
+                                        <input type="checkbox" class="form-check-input border-dark me-2 rounded-0"
+                                            id="dropdownCheck2">
+                                        <label class="form-check-label fs-6 fw-normal" for="dropdownCheck2">
+                                            Task Menu
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-0">
+                                <h2 class="text-dark fw-bold fs-9 mb-12">Verification</h2>
+                                <div class="d-flex align-items-center mb-12">
+                                        <img class="img-header me-2" src="../assets/images/warning_24dp_DC3545_FILL1_wght400_GRAD0_opsz24.png"
+                                            alt="warning">
+                                        <h3 class="text-danger fs-6 m-0">This cannot be undone!</h3>
+                                </div>
+                                <button type="button" class="mb-4 btn btn-outline-danger w-100 fw-bold rounded-2 py-3">Deactivate This Account</button>
+                            </div>
+
+                        </form>
+        
+                    </div>
+                    <div class="modal-footer border-white pt-0 px-5">
+                        <button type="button" class="btn btn-outline-success fw-bold py-2 px-6"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success fw-bold py-2 px-6" data-bs-dismiss="modal">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
